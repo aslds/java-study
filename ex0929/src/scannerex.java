@@ -8,7 +8,7 @@
 			
 		}
 	}
-}*/
+}
 class BankAccount{
 	int balance;
 	
@@ -38,6 +38,11 @@ class scannerex{
 		
 		yoon.cheakmybalance();
 		park.cheakmybalance(); // 나는동근이 KMKM
+	}
+}*/
+public class scannerex{
+	public static void main(String args[]) {
+		System.out.println("서동근 동동이 "); //ㅇㅇ
 	}
 }
 
