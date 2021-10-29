@@ -44,7 +44,7 @@ public class scannerex{
 	public static void main(String args[]) {
 		System.out.println("서동근 동동이 "); //ㅇㅇ
 		//ㄷㄱㅈㄷㄱ아저씨같아
-	}
+	}ㅇㄹ
 }
 
 
