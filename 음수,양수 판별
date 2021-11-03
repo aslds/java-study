@@ -1,0 +1,21 @@
+//수를 입력받아 음수인지 양수인지 판별, 0을 입력하면 프로그램 종료
+import java.util.Scanner;
+public class scannerex{
+	public static void main(String args[]) {
+		Scanner num1=new Scanner(System.in);
+		int aaa=1;
+		
+		for(int i=1;aaa!=0;i++) {
+			System.out.print(i+") 수 입력: ");	
+			aaa=num1.nextInt();//입력받는 변수
+			
+			if(aaa>0) {
+				System.out.println("양수");
+			}
+			else if(aaa<0){
+				System.out.println("음수");
+			}
+		}
+		System.out.println("끗");
+	}
+}
