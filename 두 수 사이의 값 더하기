@@ -1,0 +1,20 @@
+//두 수를 입력받고 그 사이의 값들을 더한다.
+import java.util.Scanner;
+public class scannerex{
+	public static void main(String args[]) {
+		Scanner num1=new Scanner(System.in);
+		
+	    System.out.println("두 수를 입력하세요: ");
+	    int first_num=num1.nextInt();
+		int second_num=num1.nextInt();
+		int sum=0;
+		
+		for(;first_num<=second_num;first_num++) {
+			sum+=first_num;
+			if(first_num<second_num) {
+				System.out.print(first_num+"+");}//마지막 숫자 전까지는 +를 출력
+			else if(first_num==second_num) {
+				System.out.print(first_num+"="+sum);}//마지막 숫자에서는 =을 출력
+		}	
+	}
+}
