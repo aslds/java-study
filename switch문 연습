@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class scannerex{
+	public static void main(String args[]) {
+		Scanner num1=new Scanner(System.in);
+		int sum=0;
+		int integer_1=0;
+		
+		while(true) {
+			System.out.println("1. 1부터 N까지의 합\n2. 1부터 N까지 홀수의 합\n3. 1부터 N까지 짝수의 합\n4.프로그램 종료");
+			System.out.println("1~4번까지 선택하시오->");
+			integer_1=num1.nextInt();
+			
+			if(integer_1>=1&&integer_1<=4) {
+				break;
+			}
+			System.out.println("요구된 정수를 입력해주세요.-3-");
+		}
+		System.out.print("N의 값을 입력하세요->");
+		int integer_2=num1.nextInt();
+		
+		switch(integer_1) {  //1~4번까지 고른 숫자에 따라 switch문을 실행한다.
+		case 1:
+			for(int i=1;i<=integer_2;i++) {
+				sum+=i;}
+			System.out.println("1부터 "+integer_2+"까지의 합: "+sum);
+			break;
+		case 2:
+			for(int i=1;i<=integer_2;i+=2) {
+				sum+=i;}
+			System.out.println("1부터 "+integer_2+"까지 홀수의 합: "+sum);
+			break;
+		case 3:
+			for(int i=2;i<=integer_2;i+=2) {
+				sum+=i;}
+			System.out.println("1부터 "+integer_2+"까지 짝수의 합: "+sum+1);
+			break;
+		case 4:
+			System.out.println("프로그램을 종료합니다.");
+		}
+	}
+}
