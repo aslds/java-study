@@ -15,3 +15,27 @@ public class scannerex{
 		}
 	}
 }
+
+
+import java.util.Scanner;
+public class scannerex{
+	public static void main(String args[]) {
+		Scanner num1=new Scanner(System.in);
+		int[] answer= new int[11];
+		int [] counter=new int[4];
+		
+		System.out.println("11개의 1~4 사이의 정수를 입력하세요>>");
+		for(int i=0;i<11;i++) {
+			answer[i]=num1.nextInt();
+		}
+		for(int i=0;i<answer.length;i++){
+			counter[answer[i]-1]++;   //answer에 존재하는 정수의 각 갯수를 구하여 그에 해당하는 counter의 수를 하나씩 증가시킴
+		}
+		for(int i=0;i<counter.length;i++) {
+			System.out.print((i+1)+"의 개수만큼 별 찍기: ");
+			for(int j=0;j<counter[i];j++) {
+				System.out.print("*");}
+			System.out.println();
+		}
+	}
+}
