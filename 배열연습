@@ -39,3 +39,18 @@ public class scannerex{
 		}
 	}
 }
+
+//연습문제  3-O
+public class happy{
+	public static void main(String args[]) {
+		int answer[]= {94,85,95,88,90};
+		int max=0;
+		
+		for(int i=0;i<answer.length;i++) {
+			if(answer[i]>max) 
+				max=answer[i]; }
+		
+		System.out.println("최댓값은 "+max+"입니다.");
+	}
+}
+
