@@ -1,0 +1,24 @@
+//숫자 중간에 삽입된 - 을 지우고 공백으로 채워서 출력하는 프로그램을 작성해본다.
+//방법1)
+public class scannerex{
+	public static void main(String args[]) {
+		StringBuilder st1=new StringBuilder("990925-1012999");
+		
+		st1.replace(6,7," ");
+		System.out.println(st1.toString());
+	}
+}
+//방법2)
+public class scannerex{
+	public static void main(String args[]) {
+		String num1="990925-1012999";
+		String aaa=num1.substring(0,6);
+		System.out.println(aaa);
+		String bbb=num1.substring(7,14);
+		System.out.println(bbb);
+		String ddd=" ";
+		
+		String ccc=aaa.concat(ddd).concat(bbb);
+		System.out.println("결과: "+ccc);
+	}
+}
