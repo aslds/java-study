@@ -54,3 +54,30 @@ public class happy{
 	}
 }
 
+//int형 1차원 배열을 매개변수로 전달받아서 배열에 저장된 최댓값, 최솟값을 찾아서 반환하는 메소드를 각각 정의하여 구성한다. 반복문을 사용할 때 for-each문을 사용하라.
+class minmax{
+	public int min(int[] arr) {
+		int min=arr[0];
+		
+		for(int e:arr)
+			if(min>e)
+				min=e;
+		return min;
+	}
+	public int max(int[] arr) {
+		int max=arr[0];
+		
+		for(int e:arr)
+			if(max<e)
+				max=e;
+		return max;
+	}
+}
+public class scannerex{
+	public static void main(String args[]) {
+		int[] arr= {1,2,3,4,5,6,7};
+		minmax num=new minmax();
+		System.out.println("최댓값 : "+num.max(arr));
+		System.out.println("최솟값 : "+num.min(arr));
+	}
+}
