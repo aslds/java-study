@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class scannerex{
+	public static void main(String args[]) {
+		Scanner num=new Scanner(System.in);
+				
+		System.out.print("정수를 입력하시오>>");
+		int integer=num.nextInt();
+		int aaa=integer;
+		
+		for(int i=0;i<integer;i++) {
+			for(int j=aaa;j>=1;j--) {
+				System.out.print("*");
+			}
+			aaa--;
+			System.out.println();
+		}
+	}
+}
