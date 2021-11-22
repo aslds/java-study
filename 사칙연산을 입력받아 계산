@@ -21,7 +21,7 @@ public class scannerex{
 		else if(sss.equals("/")==true) {
 
 			if(integer_1==0||integer_2==0) {
-				System.out.println("0으로는 나눌 수 없습니다.");
+				System.out.println("0으로는 나눌 수 없습니다");
 			}
 			else {
 				System.out.println(integer_1+" / "+integer_2+"의 계산 결과는 "+(integer_1/integer_2));
