@@ -13,7 +13,7 @@ public class scannerex{
 			if(integer_1>=1&&integer_1<=4) {
 				break;
 			}
-			System.out.println("요구된 정수를 입력해주세요.-3-");
+			System.out.println("요구된 정수를 입력해주세요>>");
 		}
 		System.out.print("N의 값을 입력하세요->");
 		int integer_2=num1.nextInt();
