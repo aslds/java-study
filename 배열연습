@@ -48,7 +48,8 @@ public class happy{
 		
 		for(int i=0;i<answer.length;i++) {
 			if(answer[i]>max) 
-				max=answer[i]; }
+				max=answer[i]; 
+		}
 		
 		System.out.println("최댓값은 "+max+"입니다.");
 	}
