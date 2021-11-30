@@ -1,4 +1,4 @@
-//제목과 저자를 나태내는 title과 author 필드를 가진 scannerex 클래스를 작성하고, 생성자를 작성하여 필드를 초기화하라.
+---//제목과 저자를 나태내는 title과 author 필드를 가진 scannerex 클래스를 작성하고, 생성자를 작성하여 필드를 초기화하라.---
 public class scannerex{
 	String title;
 	String author;
@@ -19,5 +19,29 @@ public class scannerex{
 		System.out.println(num2.title+" "+num2.author);
 		
 		
+	}
+}
+
+
+---//반지름이 0~4인 Circle객체 5개를 가지는 배열을 생성하고, 배열에 있는 모든 Circle 객체의 면적을 출력하라.---
+class Circle{
+	int radius;
+	public Circle(int radius) {
+		this.radius=radius;
+	}
+	public double getArea() {
+		return 3.14*radius*radius;
+	}
+}
+public class scannerex{
+	public static void main(String[] args) {
+		Circle[] c=new Circle[5];
+		
+		for(int i=0;i<c.length;i++)
+			c[i]=new Circle(i);
+		
+		for(int i=0;i<c.length;i++) {
+			System.out.print((int)(c[i].getArea())+" ");
+		}
 	}
 }
