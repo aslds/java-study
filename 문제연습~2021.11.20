@@ -1,4 +1,4 @@
-//중간값 
+//중간값 찾기
 import java.util.Scanner;
 public class scannerex{
 	public static void main(String args[]) {
@@ -45,3 +45,25 @@ public class scannerex{
 		}
 	}
 }
+
+//일의 자리와 십의 자리 비교
+import java.util.Scanner;
+public class scannerex{
+	public static void main(String args[]) {
+		Scanner num1=new Scanner(System.in);
+		
+		System.out.println("두 자리 숫자를 입력하세요: ");
+		int i=num1.nextInt();
+		
+		int aaa=i/10;
+		int bbb=i%10;
+		
+		if(aaa==bbb) {
+			System.out.println("두 수가 일치합니다.");
+		}
+		else {
+			System.out.println("두 수가 불일치합니다.");
+		}		
+	}
+}
+
