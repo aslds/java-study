@@ -128,3 +128,37 @@ public class scannerex{
 		}	
 	}
 }
+
+
+
+//명품자바 p.112/12번
+import java.util.Scanner;
+public class scannerex{
+	public static void main(String args[]) {
+		Scanner num1=new Scanner(System.in) ;	
+		
+		System.out.print("연산>> ");
+		int integer_1=num1.nextInt();
+		String sss=num1.next();
+		int integer_2=num1.nextInt();
+		
+		if(sss.equals("+")==true) {
+			System.out.println(integer_1+" + "+integer_2+"의 계산 결과는 "+(integer_1+integer_2));
+		}
+		else if(sss.equals("-")==true) {
+			System.out.println(integer_1+" - "+integer_2+"의 계산 결과는 "+(integer_1-integer_2));
+		}
+		else if(sss.equals("*")==true) {
+			System.out.println(integer_1+" * "+integer_2+"의 계산 결과는 "+(integer_1*integer_2));
+		}
+		else if(sss.equals("/")==true) {
+
+			if(integer_1==0||integer_2==0) {
+				System.out.println("0으로는 나눌 수 없습니다");
+			}
+			else {
+				System.out.println(integer_1+" / "+integer_2+"의 계산 결과는 "+(integer_1/integer_2));
+			}
+		}
+	}
+}
