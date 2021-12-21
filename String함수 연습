@@ -22,3 +22,6 @@ public class scannerex{
 		System.out.println("결과: "+ccc);
 	}
 }
+
+
+
