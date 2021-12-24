@@ -68,6 +68,8 @@ class scannerex{
 	}
 }
 
+
+
 //@override 연습
 class ParentAdder{
 	public int add(int a,int b) {
