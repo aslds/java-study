@@ -108,7 +108,6 @@ class Grade{
 		return (math+science+english)/3;
 	}
 }
-
 class scannerex{
 	public static void main(String args[]) {
 		Scanner scanner=new Scanner(System.in);
