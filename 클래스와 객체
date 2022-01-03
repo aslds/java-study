@@ -173,10 +173,13 @@ class Rectangle{
 	}
 	
 	boolean contains(Rectangle r) {
-		if(this.width>width&&this.height>height) {
+		if(this.x+this.width>r.x+r.width&&this.y+this.height>r.y+r.height) {
 			return true;
+			
 		}
-		return false;
+		else {
+			return false;
+		}
 }
 
 public class happy{
