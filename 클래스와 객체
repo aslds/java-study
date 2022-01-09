@@ -139,7 +139,6 @@ class Song {
 		year=y;
 		country=c;
 	}
-	
 	public void Show() {
 		System.out.println(year+"년 "+country+"국적의 "+artist+"가 부른 "+tatle);
 	}
