@@ -154,6 +154,7 @@ public class scannerex{
 }
 
 
+
 //명품자바-p.242-4번
 class Rectangle{
 	int x,y,width,height;
