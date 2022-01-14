@@ -48,6 +48,8 @@ public class scannerex{
 	}
 }
 
+
+
 //명품자바 p.241-1번
 class Tv{
 	String brand;
