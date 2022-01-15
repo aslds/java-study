@@ -94,6 +94,7 @@ class scannerex{
 }
 
 
+
 //3과목의 점수를 입력받아 Grade 객체를 생성하고 성적 평균을 출력하는 main()를 구성하라.---명품자바/p.241/2번
 import java.util.Scanner;
 class Grade{
