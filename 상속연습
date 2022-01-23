@@ -119,3 +119,35 @@ public class scannerex{
 }
 
 
+
+//명품자바-p.316-5번              //하다가 말음.
+class Point{
+	private int x,y;
+	public Point(int x,int y) {this.x=x;this.y=y;}
+	public int getX() {return x;}
+	public int getY() {return y;}
+	protected void move(int x,int y) {this.x=x;this.y=y;}
+}
+class ColorPoint extends Point{
+	String color;
+	public ColorPoint(int x,int y,String color) {  //생성자
+		super(x,y);
+		this.color=color;
+	}
+	void setXY() {
+		System.out.print("("+getX()+","+getY()+")");
+	}
+	void setColor() {
+		System.out.print(color);
+	}
+	void tostring() {
+		System.out.println(setColor()+"색의 "+setXY()+"의 점");
+	}
+	
+}
+public class scannerex{
+	public static void main(String args[]) {
+		ColorPoint cp=new ColorPoint(5,5,"YELLOW");
+		
+	}
+}
