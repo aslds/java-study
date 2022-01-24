@@ -120,6 +120,7 @@ public class scannerex{
 
 
 
+
 //명품자바-p.316-5번              //하다가 말음.
 class Point{
 	private int x,y;
