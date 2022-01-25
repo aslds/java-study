@@ -48,6 +48,7 @@ public class scannerex{
 
 
 
+
 //명품자바-p.314-1번
 class TV{
 	private int size;
