@@ -54,7 +54,6 @@ class Box<T> {
         return ob; 
     }
 }
-
 class scannerex{
     public static <T extends Number> void swapBox(Box<T> box1, Box<T> box2) {
         T temp = box1.get();//temp는 box1
