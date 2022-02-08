@@ -76,6 +76,7 @@ class scannerex{
 
 
 
+
 //문제 22-1
 class Box<T> {
     private T ob;     
