@@ -132,3 +132,31 @@ class scannerex{
 		
 	}
 }
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//예제를 보고 직접 응용해본 예제.
+import java.util.TreeSet;
+import java.util.Iterator;
+import java.util.Comparator;
+
+class IntegerComparator implements Comparator<Integer> {
+    public int compare(Integer s1, Integer s2) {
+        return s2-s1;
+    }
+}
+
+class scannerex {
+    public static void main(String[] args) {
+        TreeSet<Integer> tree = new TreeSet<>(new IntegerComparator());
+        tree.add(11);
+        tree.add(22);
+        tree.add(33);
+	
+        for(int s : tree)
+            System.out.print(s+"\t");
+
+        System.out.println();
+    }
+}
