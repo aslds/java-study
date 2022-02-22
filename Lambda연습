@@ -39,3 +39,22 @@ for(String s:list)
 System.out.println(s);
 }
 }
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+//문제28-1
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+class scannerex{
+	public static void main(String args[]) {
+		List<String> list=new ArrayList<>();
+		list.add("Robot");
+		list.add("Lambda");
+		list.add("box");
+		Collections.sort(list,String::compareToIgnoreCase);
+		System.out.println(list);
+	}
+	
+}
