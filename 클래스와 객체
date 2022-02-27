@@ -309,4 +309,53 @@ class scannerex{
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//명품자바-4강-8번
+import java.util.Scanner;
 
+class Phone{ //배열의 참조 클래스가 될 클래스를 정의한다.
+	private String name;
+	private String tel;
+	
+	public Phone(String n,String t) {this.name=n;this.tel=t;} //생성자
+	
+	public void n_setter(String name) {this.name=name;}
+	public String n_getter() {return name;}
+	public void t_setter(String tle) {this.tel=tel;}
+	public String t_getter() {return tel;}
+	
+}
+class scannerex{
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		int i=0; //반복문에 쓰일 변수이나, 필드로 선언하는 이 값이 for문에 국한되어 있는 것이 아니라 그 밖에서도 변수 i를 사용해야하기 때문.
+		
+		
+		System.out.print("인원수>>");
+		int number=sc.nextInt(); //몇 명의 인원수의 데이터를 입력 할 것인지 입력한다.
+		Phone[] arr=new Phone[number]; //입력받은 수를 기반으로 배열을 생성한다.
+		
+		for(i=0;i<number;i++) { 
+			System.out.print("이름과 전화번호(이름과 번호는 빈 칸없이 입력)>>");
+			String name=sc.next();//이름을 받는다.
+			String tel=sc.next();//전화번호를 받는다.
+			arr[i]=new Phone(name,tel);//받은 이름과 전화번호를 기반으로 배열 하나하나에 인스턴스를 생성하였다.
+		}
+		System.out.println("----저장되었습니다----");
+		
+		while(true) { //검색을 진행하는 기능, 결과를 찾아주는 기능을 하는 반복문
+			System.out.print("검색할 이름>>");
+			String name=sc.next();
+			for(i=0;i<number;i++) { //배열에 저장된 값을 하나하나 비교하여 결과를 도출한다.
+				if(arr[i].n_getter().equals(name)) {
+					System.out.println(name+"의 번호는 "+arr[i].t_getter());
+					break;
+				}
+			}
+			
+			if(name.equals("그만")) {break;} //"그만"이라고 입력하면 프로그램이 종료된다.
+			else if(i==number){System.out.println(name+"이 없습니다.");} 
+		}
+		sc.close();
+		System.out.println("----프로그램을 종료합니다----");
+	}
+}
