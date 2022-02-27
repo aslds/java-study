@@ -359,3 +359,41 @@ class scannerex{
 		System.out.println("----프로그램을 종료합니다----");
 	}
 }
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//명품자바-4장-9번
+class ArrayUtil{
+	public static int[] concat(int[] a,int[] b) {
+		int len=a.length+b.length;
+		int[] re=new int[len];
+        int i;
+		
+		for(i=0;i<a.length;i++) 
+			re[i]=a[i];
+		
+		
+		for(;i<len;i++)
+			re[i]=b[i-a.length];
+		
+		return re;
+	}
+	
+	public static void print(int[] a) {
+		System.out.print("[");
+		for(int i:a)
+			System.out.print(i+"\t");
+		System.out.print("]");
+		
+	}
+}
+
+class scannerex{
+	public static void main(String args[]) {
+		int[] array1= {1,5,7,9};
+		int[] array2= {3,6,-1,100,77};
+		int[] array3=ArrayUtil.concat(array1, array2);
+		ArrayUtil.print(array3);
+	}
+}
+
