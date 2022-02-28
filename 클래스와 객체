@@ -397,3 +397,108 @@ class scannerex{
 	}
 }
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//명품자바-4장-12번
+import java.util.Scanner;
+
+class Reservation{
+    static String[][] arr=new String[3][10];
+    
+    public void initialize() {  //arr배열을 초기화하는 함수
+    	for(int i=0;i<arr.length;i++) 
+			  for(int j=0;j<arr[i].length;j++) 
+				  arr[i][j]="---"; //초깃값은 모두 "---"이다.
+    }
+    
+	public void show(int num) { //선택한 좌석을 보여주는 클래스
+		
+	    char a='j';
+	    if(num==1) 
+	    	a='S';
+	    else if(num==2)
+	    	a='A';
+	    else if(num==3)
+	    	a='B';
+	    
+	    for(int i=num-1;i<=num-1;i++) {
+	    	System.out.print(a+">>");
+	    	for(int j=0;j<10;j++) {
+	    		System.out.print(arr[i][j]+"   ");
+	    	}
+	    }
+	}
+	
+	public void store(int num,String name,int number) {//행,이름,열을 전달받아 해당 열에 이름을 저장한다.
+		arr[num-1][number-1]=name;
+	}
+	
+	public void inquiry(){ //예약된 모든 좌석 조회
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				System.out.print(arr[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		System.out.println("<<<조회를 완료하였습니다>>>");
+	}
+	
+	public void cancel(int num,String name) { //저장된 이름을 취소한다.
+		for(int i=num-1;i<=num-1;i++) 
+	    	for(int j=0;j<10;j++) 
+	    		if(arr[i][j].equals(name)) 
+	    			arr[i][j]="---";
+	}
+}
+class scannerex{
+	
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		Reservation re=new Reservation();
+		re.initialize();//초기화 함수 호출.
+		int set;
+		String name;
+		int setnumber;
+		
+		System.out.println("명품 콘서트홀 예약 시스템입니다.");
+		
+		while(true) {
+			System.out.print("예약: 1, 조회: 2, 취소: 3, 끝내기: 4 >>");
+			int select=sc.nextInt();
+			
+			switch(select) {
+			case 1:
+				System.out.print("좌석구분 S(1), A(2), B(3)>>"); 
+				set=sc.nextInt();
+				re.show(set);
+				System.out.println();
+				System.out.print("이름>>"); 
+				name=sc.next();
+				System.out.print("번호>>"); 
+				setnumber=sc.nextInt();
+				re.store(set,name,setnumber);
+				System.out.println();
+				break;
+				
+			case 2:
+				re.inquiry();
+				System.out.println();
+				break;
+			case 3:
+				System.out.print("좌석 S:1, A:2, B:3>>"); 
+				set=sc.nextInt();
+				re.show(set);
+				System.out.println();
+				System.out.print("이름>>"); 
+				name=sc.next();
+				re.cancel(set,name);
+				System.out.println();
+				break;
+				
+			case 4:
+				System.out.println("프로그램을 종료합니다.");
+				System.exit(0);
+			}
+	}
+	
+}}
