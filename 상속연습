@@ -157,4 +157,39 @@ public class scannerex{
 
 
 
+//명품자바-5장-5번
+class Point{
+	private int x,y;
+	public Point(int x,int y) {this.x=x; this.y=y;}
+	public int getX() {return x;}
+	public int getY() {return y;}
+	protected void move(int x,int y) {this.x=x; this.y=y;}
+}
+
+class ColorPoint extends Point{
+	private String color;
+	public ColorPoint(int x,int y,String color) {
+		super(x,y);
+		this.color=color;
+	}
+	void setXY(int x,int y) { //이 함수의 기능은 그냥 값을 받아오는 역할!! 이 함수로 인해서 값의 변경도 가능하쥬!
+		move(x,y);
+	}
+	void setColor(String color) { //이 함수의 기능은 그냥 값을 받아오는 역할!! 이 함수로 인해서 값의 변경도 가능하쥬!
+		this.color=color;
+	}
+	public String toString() {
+		return color+"색의 ("+getX()+","+getY()+")의 점"; 
+	}
+}
+
+class scannerex{
+	public static void main(String args[]) {
+		ColorPoint cp=new ColorPoint(5,5,"YELLOW");
+		cp.setXY(10,20);
+		cp.setColor("RED");
+		String str=cp.toString();
+		System.out.println(str+"입니다.");
+	}
+}
 
