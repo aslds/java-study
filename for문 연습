@@ -16,3 +16,22 @@ class scannerex{
 		}
 	}
 }
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+//명품자바-6장-3번
+class scannerex{
+	public static void main(String arg[]) {
+		System.out.println("2의 10승: "+show(10));
+	}
+	
+	public static int show(int n) {
+		if(n==1)
+			return 2;
+		else
+			return 2*show(n-1);
+	}
+}
+
