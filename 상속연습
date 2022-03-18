@@ -157,7 +157,7 @@ public class scannerex{
 }
 
 
-------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 //명품자바-5장-5번
@@ -331,5 +331,33 @@ class scannerex{
 		PositivePoint p2=new PositivePoint(-10,-10);
 		System.out.println(p2.toString()+"입니다.");
 		
+	}
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+import java.util.Random;
+
+class scannerex{
+	public static void main(String args[]) {
+		Random ra=new Random();
+		int mr=ra.nextInt(31);
+		Scanner sc=new Scanner(System.in);
+		while(true) {
+			System.out.print("숫자를 입력하세요>>");
+			int num=sc.nextInt();
+			
+			if(num>mr) {
+				System.out.println("Down"); 
+			}
+			else if(num==mr) {
+				System.out.println("정답"); break;
+			}
+			else if(num<mr) {
+				System.out.println("Up");
+			}
+		}
 	}
 }
