@@ -35,3 +35,34 @@ class scannerex{
 	}
 }
 
+------------------------------------------------------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+class scannerex{
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		int accept=sc.nextInt();
+		String[][] arr=new String[accept][accept];
+		
+		for(int i=0;i<accept;i++) {
+			int j=accept;
+			for(j=0;j<=i;j++) {
+				arr[i][j]="*";
+			}
+		}
+		
+		for(int i=0;i<accept;i++) {
+			int j=0;
+			for(j=0;j<=i;j++) {
+				System.out.print(arr[i][j]);
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
