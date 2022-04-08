@@ -110,8 +110,7 @@ class scannerex{
 import java.util.Random;
 import java.util.Scanner;
 
-
-class scannerex{
+class rock_paper_scissors{
 	public static void main(String args[]) {
 		Random random=new Random();
 		Scanner sc=new Scanner(System.in);
@@ -119,7 +118,7 @@ class scannerex{
 		
 		while(true) {
 	    	
-	    	System.out.println("가위 바위 보 게임입니다. 가위, 바위 ,보 중에서 입력하세요. \n입력 >>");
+	    	System.out.print("가위 바위 보 게임입니다. 가위, 바위 ,보 중에서 입력하세요. \n입력 >>");
 		    String input=sc.next();
 		    
 		    String a="a";
@@ -130,16 +129,24 @@ class scannerex{
 	        if(com==3)
 	        	a="보";
 	        
+	        if(input.equals("그만")) {
+	        	System.out.println("프로그램을 종료합니다.");
+	        	break;
+	        }
 	        
-	        System.out.println("나는 "+input+" 컴퓨터는 "+a+"을 냈습니다.");
 	        
-	        if(input.equals(a))
-	        	System.out.println("비겼다.");
-	        if((input.equals("가위")&&a.equals("보"))||(input.equals("보")&&a.equals("바위"))||(input.equals("바위")&&a.equals("가위")))
-	        	System.out.println("이겼다.");
-	        if((input.equals("가위")&&a.equals("바위"))||(input.equals("보")&&a.equals("가위"))||(input.equals("바위")&&a.equals("보")))
-	        	System.out.println("졌다.");
-	        	
+	        if(input.equals("가위")||input.equals("바위")||input.equals("보")) {
+	        	System.out.println("{나는 "+input+" 컴퓨터는 "+a+"을 냈습니다.}");
+		        if(input.equals(a))
+		        	System.out.println("비겼다.");
+		        else if((input.equals("가위")&&a.equals("보"))||(input.equals("보")&&a.equals("바위"))||(input.equals("바위")&&a.equals("가위")))
+		        	System.out.println("이겼다.");
+		        else if((input.equals("가위")&&a.equals("바위"))||(input.equals("보")&&a.equals("가위"))||(input.equals("바위")&&a.equals("보")))
+		        	System.out.println("졌다.");
+	        }
+	        else {
+	        	System.out.println("**가위, 바위, 보 중에 입력해주세요!!!**");
+	        }
 	    }
 	}
 }
